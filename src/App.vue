@@ -9,15 +9,6 @@
       <h1>Hello World From Sam</h1>
     </section>
 
-    <section className="contents" data-scroll-section>
-      <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="9">
-        I Love React
-      </h1>
-      <h1 data-scroll data-scroll-direction="vertical" data-scroll-speed="9">
-        That's why i code everyday
-      </h1>
-    </section>
-
     <section id="sticky" data-scroll-section>
       <h1
         data-scroll
@@ -33,15 +24,24 @@
       <p>Placeholders Placeholders</p>
     </section>
 
+    <section className="contents" data-scroll-section>
+      <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="9">
+        I Love React
+      </h1>
+      <h1 data-scroll data-scroll-direction="vertical" data-scroll-speed="9">
+        That's why i code everyday
+      </h1>
+    </section>
+
     <section className="footer" data-scroll-section>
       <h1
         className=" op-class"
         data-scroll
         data-scroll-repeat="true"
-        data-scroll-class="fadeIn"
+        data-scroll-class="animate"
         data-scroll-speed="5"
       >
-        Let's end the application with this Footer
+        Here, we're calling the Animate class when the Content scrolls into view
       </h1>
     </section>
   </main>
@@ -104,5 +104,19 @@ section {
 #sticky {
   background-color: blueviolet;
   padding: 50px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+}
+
+.op-class {
+  opacity: 0;
+}
+
+.animate {
+  opacity: 1;
+  transition: opacity 4s;
 }
 </style>
