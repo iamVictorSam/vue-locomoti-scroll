@@ -1,31 +1,108 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <main data-scroll-container ref="container">
+    <section
+      className="hello"
+      data-scroll
+      data-scroll-speed="5"
+      data-scroll-section
+    >
+      <h1>Hello World From Sam</h1>
+    </section>
+
+    <section className="contents" data-scroll-section>
+      <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="9">
+        I Love React
+      </h1>
+      <h1 data-scroll data-scroll-direction="vertical" data-scroll-speed="9">
+        That's why i code everyday
+      </h1>
+    </section>
+
+    <section id="sticky" data-scroll-section>
+      <h1
+        data-scroll
+        data-scroll-speed="5"
+        data-scroll-sticky
+        data-scroll-target="#sticky"
+      >
+        Sticky scroll example
+      </h1>
+      <p>Placeholders Placeholders</p>
+      <p>Placeholders Placeholders</p>
+      <p>Placeholders Placeholders</p>
+      <p>Placeholders Placeholders</p>
+    </section>
+
+    <section className="footer" data-scroll-section>
+      <h1
+        className=" op-class"
+        data-scroll
+        data-scroll-repeat="true"
+        data-scroll-class="fadeIn"
+        data-scroll-speed="5"
+      >
+        Let's end the application with this Footer
+      </h1>
+    </section>
+  </main>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+<script>
+import LocomotiveScroll from "locomotive-scroll";
+
+// const container = ref(null);
+
+// const scroll = LocomotiveScroll({
+//   el: document.querySelector(container.value),
+//   smooth: true,
+// });
+
+// onMounted(() => scroll);
+
+export default {
+  name: "Page",
+  methods: {
+    setScroll() {
+      const scroller = new LocomotiveScroll({
+        el: this.$refs.container,
+        smooth: true,
+        multiplier: 2,
+      });
+    },
+  },
+  mounted() {
+    this.setScroll();
+  },
+};
+</script>
+
+<style>
+/* .container,
+.container > * {
+  width: 100%;
+  min-width: 100%;
+  color: black;
+} */
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: xx-large;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.hello {
+  background-color: red;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.contents {
+  background-color: greenyellow;
+}
+
+#sticky {
+  background-color: blueviolet;
+  padding: 50px;
 }
 </style>
