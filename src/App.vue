@@ -24,18 +24,18 @@
       <p>Placeholders Placeholders</p>
     </section>
 
-    <section className="contents" data-scroll-section>
-      <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="9">
-        I Love React
-      </h1>
+    <section className="parallax" data-scroll-section>
       <h1 data-scroll data-scroll-direction="vertical" data-scroll-speed="9">
-        That's why i code everyday
+        Vertical Parallax scroll
+      </h1>
+      <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="9">
+        Horizontal Parallax Scroll
       </h1>
     </section>
 
-    <section className="footer" data-scroll-section>
+    <section className="scroll-into-view" data-scroll-section>
       <h1
-        className=" op-class"
+        className="hint-text"
         data-scroll
         data-scroll-repeat="true"
         data-scroll-class="animate"
@@ -97,21 +97,21 @@ section {
   background-color: red;
 }
 
-.contents {
+.parallax {
   background-color: greenyellow;
 }
 
 #sticky {
-  background-color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.469);
   padding: 50px;
 }
 
-.footer {
+.scroll-into-view {
   background-color: black;
   color: white;
 }
 
-.op-class {
+.hint-text {
   opacity: 0;
 }
 
