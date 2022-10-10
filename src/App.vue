@@ -77,13 +77,6 @@ export default {
 </script>
 
 <style>
-/* .container,
-.container > * {
-  width: 100%;
-  min-width: 100%;
-  color: black;
-} */
-
 section {
   height: 100vh;
   display: flex;
