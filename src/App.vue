@@ -1,5 +1,5 @@
 <template>
-  <main data-scroll-container ref="container">
+  <main ref="container">
     <section
       className="hello"
       data-scroll
@@ -56,7 +56,7 @@ export default {
       new LocomotiveScroll({
         el: this.$refs.container,
         smooth: true,
-        multiplier: 2,
+        multiplier: 5,
       });
     },
   },
