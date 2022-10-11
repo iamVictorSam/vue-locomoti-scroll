@@ -49,7 +49,6 @@
 
 <script>
 import LocomotiveScroll from "locomotive-scroll";
-// import { ref, onMounted } from "vue";
 
 export default {
   methods: {
