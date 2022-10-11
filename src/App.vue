@@ -88,6 +88,8 @@ section {
 
 .hello {
   background-color: red;
+  background-image: url("./assets/background.png");
+  color: rgba(0, 0, 0, 0.745);
 }
 
 .parallax {
