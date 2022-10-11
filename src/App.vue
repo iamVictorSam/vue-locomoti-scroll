@@ -49,21 +49,12 @@
 
 <script>
 import LocomotiveScroll from "locomotive-scroll";
-
-// const container = ref(null);
-
-// const scroll = LocomotiveScroll({
-//   el: document.querySelector(container.value),
-//   smooth: true,
-// });
-
-// onMounted(() => scroll);
+// import { ref, onMounted } from "vue";
 
 export default {
-  name: "Page",
   methods: {
-    setScroll() {
-      const scroller = new LocomotiveScroll({
+    setLocomotiveScroll() {
+      new LocomotiveScroll({
         el: this.$refs.container,
         smooth: true,
         multiplier: 2,
@@ -71,7 +62,7 @@ export default {
     },
   },
   mounted() {
-    this.setScroll();
+    this.setLocomotiveScroll();
   },
 };
 </script>
