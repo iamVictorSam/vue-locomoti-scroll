@@ -10,12 +10,7 @@
     </section>
 
     <section id="sticky" data-scroll-section>
-      <h1
-        data-scroll
-        data-scroll-speed="5"
-        data-scroll-sticky
-        data-scroll-target="#sticky"
-      >
+      <h1 data-scroll data-scroll-sticky data-scroll-target="#sticky">
         Sticky scroll example
       </h1>
       <p>Placeholders Placeholders</p>
