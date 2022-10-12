@@ -3,7 +3,7 @@
     <section
       className="hello"
       data-scroll
-      data-scroll-speed="5"
+      data-scroll-speed="2"
       data-scroll-section
     >
       <h1>Hello World From Sam</h1>
