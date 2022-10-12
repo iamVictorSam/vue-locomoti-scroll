@@ -56,7 +56,7 @@ export default {
       new LocomotiveScroll({
         el: this.$refs.container,
         smooth: true,
-        multiplier: 5,
+        multiplier: 2,
       });
     },
   },
